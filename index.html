@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta name="description" content="Jack Stromberg\'s site about stuff!." />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Letters/Numbers Encoder/Decoder - Jack Stromberg</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://jackstromberg.com/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="https://jackstromberg.com/wp-content/themes/twentytwelve/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<style type='text/css' media='screen' >.socialwrap li.icon_text a img, .socialwrap li.iconOnly a img, .followwrap li.icon_text a img, .followwrap li.iconOnly a img{border-width:0 !important;background-color:none;}#follow.right {width:32px;position:fixed; right:0; top:100px;background-color:#878787;padding:10px 0;font-family:impact,charcoal,arial, helvetica,sans-serif;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius:5px;-moz-border-radius-bottomleft:5px;-webkit-border-bottom-left-radius:5px;border:2px solid #fff;border-right-width:0}#follow.right ul {padding:0; margin:0; list-style-type:none !important;font-size:24px;color:black;}
+#follow.right ul li {padding-bottom:10px;list-style-type:none !important;padding-left:4px;padding-right:4px}
+#follow img{border:none;}#follow.right ul li.follow {margin:0 4px;}
+#follow.right ul li.follow img {border-width:0;display:block;overflow:hidden; background:transparent url(http://jackstromberg.com/wp-content/plugins/share-and-follow/images/impact/follow-right.png) no-repeat -0px 0px;height:79px;width:20px;}
+#follow.right ul li a {display:block;}
+#follow.right ul li.follow span, #follow ul li a span {display:none}.share {margin:0 3px 3px 0;}
+.phat span {display:inline;}
+ul.row li {float:left;list-style-type:none;}
+li.iconOnly a span.head {display:none}
+#follow.left ul.size16 li.follow{margin:0px auto !important}
+li.icon_text a {padding-left:0;margin-right:3px}
+li.text_only a {background-image:none !important;padding-left:0;}
+li.text_only a img {display:none;}
+li.icon_text a span{background-image:none !important;padding-left:0 !important; }
+li.iconOnly a span.head {display:none}
+ul.socialwrap li {margin:0 3px 3px 0 !important;}
+ul.socialwrap li a {text-decoration:none;}ul.row li {float:left;line-height:auto !important;}
+ul.row li a img {padding:0}.size16 li a,.size24 li a,.size32 li a, .size48 li a, .size60 li a {display:block}ul.socialwrap {list-style-type:none !important;margin:0; padding:0;text-indent:0 !important;}
+ul.socialwrap li {list-style-type:none !important;background-image:none;padding:0;list-style-image:none !important;}
+ul.followwrap {list-style-type:none !important;margin:0; padding:0}
+ul.followwrap li {margin-right:3px;margin-bottom:3px;list-style-type:none !important;}
+#follow.right ul.followwrap li, #follow.left ul.followwrap li {margin-right:0px;margin-bottom:0px;}
+.shareinpost {clear:both;padding-top:0px}.shareinpost ul.socialwrap {list-style-type:none !important;margin:0 !important; padding:0 !important}
+.shareinpost ul.socialwrap li {padding-left:0 !important;background-image:none !important;margin-left:0 !important;list-style-type:none !important;text-indent:0 !important}
+.socialwrap li.icon_text a img, .socialwrap li.iconOnly a img{border-width:0}ul.followrap li {list-style-type:none;list-style-image:none !important;}
+div.clean {clear:left;}
+div.display_none {display:none;}
+.button_holder_left{margin-right:5px;display:inline}.button_holder_right{margin-left:5px;display:inline}.button_holder_show_interactive{display:inline}</style><style type='text/css' media='print' >.socialwrap li.icon_text a img, .socialwrap li.iconOnly a img, .followwrap li.icon_text a img, .followwrap li.iconOnly a img{border-width:0 !important;background-color:none;}#follow.right {width:32px;position:fixed; right:0; top:100px;background-color:#878787;padding:10px 0;font-family:impact,charcoal,arial, helvetica,sans-serif;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius:5px;-moz-border-radius-bottomleft:5px;-webkit-border-bottom-left-radius:5px;border:2px solid #fff;border-right-width:0}#follow.right ul {padding:0; margin:0; list-style-type:none !important;font-size:24px;color:black;}
+#follow.right ul li {padding-bottom:10px;list-style-type:none !important;padding-left:4px;padding-right:4px}
+#follow img{border:none;}#follow.right ul li.follow {margin:0 4px;}
+#follow.right ul li.follow img {border-width:0;display:block;overflow:hidden; background:transparent url(http://jackstromberg.com/wp-content/plugins/share-and-follow/images/impact/follow-right.png) no-repeat -0px 0px;height:79px;width:20px;}
+#follow.right ul li a {display:block;}
+#follow.right ul li.follow span, #follow ul li a span {display:none}.share {margin:0 3px 3px 0;}
+.phat span {display:inline;}
+ul.row li {float:left;list-style-type:none;}
+li.iconOnly a span.head {display:none}
+#follow.left ul.size16 li.follow{margin:0px auto !important}
+li.icon_text a {padding-left:0;margin-right:3px}
+li.text_only a {background-image:none !important;padding-left:0;}
+li.text_only a img {display:none;}
+li.icon_text a span{background-image:none !important;padding-left:0 !important; }
+li.iconOnly a span.head {display:none}
+ul.socialwrap li {margin:0 3px 3px 0 !important;}
+ul.socialwrap li a {text-decoration:none;}ul.row li {float:left;line-height:auto !important;}
+ul.row li a img {padding:0}.size16 li a,.size24 li a,.size32 li a, .size48 li a, .size60 li a {display:block}ul.socialwrap {list-style-type:none !important;margin:0; padding:0;text-indent:0 !important;}
+ul.socialwrap li {list-style-type:none !important;background-image:none;padding:0;list-style-image:none !important;}
+ul.followwrap {list-style-type:none !important;margin:0; padding:0}
+ul.followwrap li {margin-right:3px;margin-bottom:3px;list-style-type:none !important;}
+#follow.right ul.followwrap li, #follow.left ul.followwrap li {margin-right:0px;margin-bottom:0px;}
+.shareinpost {clear:both;padding-top:0px}.shareinpost ul.socialwrap {list-style-type:none !important;margin:0 !important; padding:0 !important}
+.shareinpost ul.socialwrap li {padding-left:0 !important;background-image:none !important;margin-left:0 !important;list-style-type:none !important;text-indent:0 !important}
+.socialwrap li.icon_text a img, .socialwrap li.iconOnly a img{border-width:0}ul.followrap li {list-style-type:none;list-style-image:none !important;}
+div.clean {clear:left;}
+div.display_none {display:none;}
+.button_holder_left{margin-right:5px;display:inline}.button_holder_right{margin-left:5px;display:inline}.button_holder_show_interactive{display:inline}</style>
+	<!-- This site is optimized with the Yoast SEO plugin v19.12 - https://yoast.com/wordpress/plugins/seo/ -->
+	<link rel="canonical" href="https://jackstromberg.com/letters-numbers-encoder-decoder/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Letters/Numbers Encoder/Decoder - Jack Stromberg" />
+	<meta property="og:description" content="Bookmark on Delicious Digg this post Recommend on Facebook share via Reddit Share with Stumblers Tweet about it Subscribe to the comments on this post Print for later Bookmark in Browser Tell a friend" />
+	<meta property="og:url" content="https://jackstromberg.com/letters-numbers-encoder-decoder/" />
+	<meta property="og:site_name" content="Jack Stromberg" />
+	<meta property="article:modified_time" content="2013-03-26T14:15:14+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://jackstromberg.com/letters-numbers-encoder-decoder/","url":"https://jackstromberg.com/letters-numbers-encoder-decoder/","name":"Letters/Numbers Encoder/Decoder - Jack Stromberg","isPartOf":{"@id":"https://jackstromberg.com/#website"},"datePublished":"2013-03-26T14:12:10+00:00","dateModified":"2013-03-26T14:15:14+00:00","breadcrumb":{"@id":"https://jackstromberg.com/letters-numbers-encoder-decoder/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://jackstromberg.com/letters-numbers-encoder-decoder/"]}]},{"@type":"BreadcrumbList","@id":"https://jackstromberg.com/letters-numbers-encoder-decoder/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jackstromberg.com/"},{"@type":"ListItem","position":2,"name":"Letters/Numbers Encoder/Decoder"}]},{"@type":"WebSite","@id":"https://jackstromberg.com/#website","url":"https://jackstromberg.com/","name":"Jack Stromberg","description":"A site about stuff","publisher":{"@id":"https://jackstromberg.com/#/schema/person/d694bc0ed060c831ac19ae7bf7d35963"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://jackstromberg.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":["Person","Organization"],"@id":"https://jackstromberg.com/#/schema/person/d694bc0ed060c831ac19ae7bf7d35963","name":"Jack","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://jackstromberg.com/#/schema/person/image/","url":"https://secure.gravatar.com/avatar/ecd8ba244cc81186453bb3bae07e427d?s=96&d=mm&r=g","contentUrl":"https://secure.gravatar.com/avatar/ecd8ba244cc81186453bb3bae07e427d?s=96&d=mm&r=g","caption":"Jack"},"logo":{"@id":"https://jackstromberg.com/#/schema/person/image/"},"sameAs":["http://www.vooba.net","https://www.linkedin.com/in/jackstromberg/","https://www.youtube.com/channel/UC7Awj5FhTyuOaLY-jQ6Xlkg"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//jackstromberg.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Jack Stromberg &raquo; Feed" href="https://jackstromberg.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Jack Stromberg &raquo; Comments Feed" href="https://jackstromberg.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Jack Stromberg &raquo; Letters/Numbers Encoder/Decoder Comments Feed" href="https://jackstromberg.com/letters-numbers-encoder-decoder/feed/" />
+<script type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/jackstromberg.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.2"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){p.clearRect(0,0,i.width,i.height),p.fillText(e,0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(t,0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s("\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!s("\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!s("\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!s("\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff","\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff")}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='https://jackstromberg.com/wp-includes/css/dist/block-library/style.min.css?ver=6.2' type='text/css' media='all' />
+<style id='wp-block-library-theme-inline-css' type='text/css'>
+.wp-block-audio figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio figcaption{color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed figcaption{color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}.wp-block-image figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-image figcaption{color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video figcaption{color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video figcaption{color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}.wp-block-template-part.has-background{margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+</style>
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://jackstromberg.com/wp-includes/css/classic-themes.min.css?ver=6.2' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #fff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--blue: #21759b;--wp--preset--color--dark-gray: #444;--wp--preset--color--medium-gray: #9f9f9f;--wp--preset--color--light-gray: #e6e6e6;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://jackstromberg.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.7.6' type='text/css' media='all' />
+<link rel='stylesheet' id='acx_fsmi_styles-css' href='https://jackstromberg.com/wp-content/plugins/floating-social-media-icon/css/style.css?v=4.3.5&#038;ver=6.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css' href='https://fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C700italic%2C400%2C700&#038;subset=latin%2Clatin-ext&#038;display=fallback' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css' href='https://jackstromberg.com/wp-content/themes/twentytwelve/style.css?ver=20190507' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css' href='https://jackstromberg.com/wp-content/themes/twentytwelve/css/blocks.css?ver=20190406' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css' href='https://jackstromberg.com/wp-content/themes/twentytwelve/css/ie.css?ver=20150214' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='https://jackstromberg.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.3' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://jackstromberg.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.0' id='jquery-migrate-js'></script>
+<link rel="https://api.w.org/" href="https://jackstromberg.com/wp-json/" /><link rel="alternate" type="application/json" href="https://jackstromberg.com/wp-json/wp/v2/pages/793" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://jackstromberg.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://jackstromberg.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.2" />
+<link rel='shortlink' href='https://jackstromberg.com/?p=793' />
+<link rel="alternate" type="application/json+oembed" href="https://jackstromberg.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjackstromberg.com%2Fletters-numbers-encoder-decoder%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://jackstromberg.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjackstromberg.com%2Fletters-numbers-encoder-decoder%2F&#038;format=xml" />
+
+<!-- Starting Styles For Social Media Icon From Acurax International www.acurax.com -->
+<style type='text/css'>
+#divBottomRight img 
+{
+width: 32px; 
+}
+#divBottomRight 
+{
+min-width:0px; 
+position: static; 
+}
+</style>
+<!-- Ending Styles For Social Media Icon From Acurax International www.acurax.com -->
+
+	<link type="text/css" rel="stylesheet" href="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/styles/shCore.css" />
+	<link type="text/css" rel="stylesheet" href="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/styles/shThemeDefault.css" />
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shCore.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushBash.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushCpp.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushCSharp.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushCss.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushDelphi.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushDiff.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushGroovy.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushJava.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushPerl.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushPhp.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushPlain.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushPython.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushRuby.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushScala.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushSql.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushVb.js"></script>
+	<script type="text/javascript" src="https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/shBrushXml.js"></script>
+	<script type="text/javascript">		
+		SyntaxHighlighter.config.clipboardSwf = 'https://jackstromberg.com/wp-content/plugins/syntax-highlighter-and-code-prettifier/scripts/clipboard.swf';
+		SyntaxHighlighter.all();
+	</script>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>		<style type="text/css" id="wp-custom-css">
+			.grecaptcha-badge { 
+    visibility: hidden;
+}		</style>
+		</head>
+
+<body class="page-template page-template-page-templates page-template-LettersNumbers page-template-page-templatesLettersNumbers-php page page-id-793 wp-embed-responsive custom-font-enabled">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="https://jackstromberg.com/" title="Jack Stromberg" rel="home">Jack Stromberg</a></h1>
+			<h2 class="site-description">A site about stuff</h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="nav-menu"><ul>
+<li ><a href="https://jackstromberg.com/">Home</a></li><li class="page_item page-item-8619"><a href="https://jackstromberg.com/adfs-relay-state-generator/">ADFS Relay State Generator</a></li>
+<li class="page_item page-item-531"><a href="https://jackstromberg.com/ascii-table/">ASCII Table</a></li>
+<li class="page_item page-item-8296"><a href="https://jackstromberg.com/browser-info/">Browser Info</a></li>
+<li class="page_item page-item-9685"><a href="https://jackstromberg.com/pictures/">Gallery</a></li>
+<li class="page_item page-item-8415"><a href="https://jackstromberg.com/html-encoder-decoder/">HTML Encoder/Decoder</a></li>
+<li class="page_item page-item-3174"><a href="https://jackstromberg.com/nslookup/">NSLookup</a></li>
+<li class="page_item page-item-8195"><a href="https://jackstromberg.com/o365-smart-linksso-link-generator/">O365 Smart Link/SSO Link Generator</a></li>
+<li class="page_item page-item-11223"><a href="https://jackstromberg.com/spf-generator/">SPF Generator</a></li>
+<li class="page_item page-item-9295"><a href="https://jackstromberg.com/subnet-calculator/">Subnet Calculator</a></li>
+<li class="page_item page-item-12295"><a href="https://jackstromberg.com/tcpdump-generator/">tcpdump Generator</a></li>
+<li class="page_item page-item-8990"><a href="https://jackstromberg.com/uptime-percentage-chart/">Uptime Percentage Chart</a></li>
+<li class="page_item page-item-505"><a href="https://jackstromberg.com/base64-encoder-decoder/">Base64 Encoder-Decoder</a></li>
+<li class="page_item page-item-787"><a href="https://jackstromberg.com/caesarian-shift-rot-n/">Caesarian Shift (Rot-n)</a></li>
+<li class="page_item page-item-692"><a href="https://jackstromberg.com/hashing/">Hashing</a></li>
+<li class="page_item page-item-782"><a href="https://jackstromberg.com/url-encoder-decoder/">URL Encoder/Decoder</a></li>
+<li class="page_item page-item-523"><a href="https://jackstromberg.com/hexadecimal-converter/">Hexadecimal Converter</a></li>
+<li class="page_item page-item-793 current_page_item"><a href="https://jackstromberg.com/letters-numbers-encoder-decoder/" aria-current="page">Letters/Numbers Encoder/Decoder</a></li>
+<li class="page_item page-item-757"><a href="https://jackstromberg.com/mac-address-lookup/">MAC Address Lookup</a></li>
+<li class="page_item page-item-498"><a href="https://jackstromberg.com/whats-my-ip-address/">What's My IP Address</a></li>
+<li class="page_item page-item-488"><a href="https://jackstromberg.com/contact/">Contact</a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	function encodeDecode(string){
+		var newString = "";
+		var charCode = 0;
+		var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		var numbers = '0123456789';
+		var was_letter = 0;
+		var encodedCharacters=0;
+		var encodedCharactersSum=0;
+		
+		for(i=0;i<string.length;i++)
+		{
+			if(jQuery("#encodeDecode").val()=="0"){
+				string = string.toUpperCase();
+				charCode = string.charCodeAt(i);
+				if(!((charCode> 64) && (charCode < 91 )))
+					continue;
+				
+				code = alphabet.indexOf(string.charAt(i));
+				code +=1;
+				
+				if(code<10 && jQuery("#formatChar").val()=="")
+					newString += "0";
+				
+				newString += code.toString() + jQuery("#formatChar").val();
+				encodedCharacters+=1;
+				encodedCharactersSum+=code;
+			}else{
+				c = string.charAt(i);
+				j = numbers.indexOf(c);
+				charCode = string.charCodeAt(i);
+				if(!((charCode> 47) && (charCode < 58 ))){
+					if(newString.charAt( newString.length -1 ) == ":" || newString.charAt( newString.length-1 ) == "." || newString.charAt( newString.length-1 ) == "-")
+						continue;
+						
+					newString += jQuery("#formatChar").val();
+					continue;
+				}
+					
+				if (j < 0)
+				{
+					if (! was_letter ||  c != " " || c != ":" || c != "-" || c!=".")
+						newString += c;
+					was_letter = 0;
+				}
+				else
+				{
+					was_letter = j;
+					if (string.length > i + 1)
+					{
+						j = numbers.indexOf(string.charAt(i + 1));
+						if (j >= 0)
+						{
+							i++;
+							was_letter = (was_letter * 10) + j;
+						}
+					}
+					if (was_letter >= 1 && was_letter <= 26)
+					{
+						newString += alphabet.charAt(was_letter - 1);
+					}
+					else
+					{
+						newString += was_letter;
+						was_letter = 0;
+					}
+				}
+			}
+		}
+		
+		if(jQuery("#encodeDecode").val()=="0"){
+			jQuery("#CaesarianResult").html(newString.substring(0, newString.length - 1));
+			jQuery("#CaesarianEncodeCount").html(encodedCharacters);
+			jQuery("#CaesarianEncodeCountSum").html(encodedCharactersSum);
+		}else{
+			jQuery("#CaesarianResult").html(newString);
+		}
+	}
+
+	jQuery('#text').bind('input propertychange', function() {
+		encodeDecode(jQuery("#text").val());
+	});
+	
+	jQuery("#formatChar").change(function() {
+		encodeDecode(jQuery("#text").val());
+	});
+	
+	jQuery("#encodeDecode").change(function() {
+		if(jQuery("#encodeDecode").val()=="0")
+			jQuery("#encodeCountHTML").show();
+		else
+			jQuery("#encodeCountHTML").hide();
+		encodeDecode(jQuery("#text").val());
+	});
+});
+</script>
+	<div id="primary" class="site-content">
+		<div id="content" role="main">
+			<div style="text-align:center;">
+				<div style="margin-bottom:23px;"><span style="font-size:2em;">Letters/Numbers Encoder/Decoder</span></div>
+				<div>
+					<div><span style="font-size:1.2em;">Text to Encode/Decode</span></div>
+					<div><textarea id="text" style="width:99%;height:225px;"></textarea></div>
+					<div>
+						Format with <select name="formatChar" id="formatChar">
+							<option value=" ">Space</option>
+							<option value="-">-</option>
+							<option value=".">.</option>
+							<option value=":">:</option>
+							<option value="">None</option>
+						</select>
+						&bull; 
+						Method <select name="encodeDecode" id="encodeDecode">
+							<option value="0">Encode</option>
+							<option value="1">Decode</option>
+						</select>
+					</div>
+					<div style="text-align:left;">
+						<div style="margin:12px 0;"><span style="font-size:1.2em;">How's this work?</span></div>
+						<div>This cypher does basic substitution for a character in the alphabet.<br/>In this case, A=1, B=2, C=3, D=4, etc.</div>
+					</div>
+					<div style="text-align:left;">
+						<div style="margin:12px 0;"><span style="font-size:1.2em;">Result</span></div>
+						<div id="CaesarianResult" style="word-wrap:break-word;text-wrap:normal;border:1px solid #000;padding:4px;min-height:1em;"></div>
+					</div>
+					<div style="text-align:left;" id="encodeCountHTML">
+						<div style="margin:12px 0;min-height:1em;"><span style="font-size:1.2em;">Encoded Characters:</span>
+							<span id="CaesarianEncodeCount" style="border:1px solid #000;padding:4px;">0</span>
+							<span style="font-size:1.2em;">Encoded Characters Sum:</span> <span id="CaesarianEncodeCountSum" style="border:1px solid #000;padding:4px;">0</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- #content -->
+					<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/letters-numbers-encoder-decoder/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://jackstromberg.com/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message">Required fields are marked <span class="required">*</span></span></p><p class="comment-form-comment"><label for="comment">Comment <span class="required">*</span></label> <textarea autocomplete="new-password"  id="cb2bc7c3d3"  name="cb2bc7c3d3"   cols="45" rows="8" maxlength="65525" required="required"></textarea><textarea id="comment" aria-label="hp-comment" aria-hidden="true" name="comment" autocomplete="new-password" style="padding:0 !important;clip:rect(1px, 1px, 1px, 1px) !important;position:absolute !important;white-space:nowrap !important;height:1px !important;width:1px !important;overflow:hidden !important;" tabindex="-1"></textarea><script data-noptimize>document.getElementById("comment").setAttribute( "id", "a8d12c48e19276f9258b559c362e8638" );document.getElementById("cb2bc7c3d3").setAttribute( "id", "comment" );</script></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" autocomplete="name" required="required" /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" autocomplete="email" required="required" /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" autocomplete="url" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='793' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p></form>	</div><!-- #respond -->
+		</div><!-- #primary -->
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="https://jackstromberg.com/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside>
+		<aside id="recent-posts-2" class="widget widget_recent_entries">
+		<h3 class="widget-title">Recent Posts</h3>
+		<ul>
+											<li>
+					<a href="https://jackstromberg.com/2022/01/how-to-generate-a-root-certificate-and-create-a-self-signed-server-certificate-issued-from-the-root/">How to generate a root certificate and create a self-signed server certificate issued from the root</a>
+									</li>
+											<li>
+					<a href="https://jackstromberg.com/2021/08/using-sdrplay-rspduo-with-rtlsdr-airplay-and-a-raspberrypi/">Using SDRplay RSPduo with RTLSDR-Airplay and a RaspberryPi</a>
+									</li>
+											<li>
+					<a href="https://jackstromberg.com/2021/07/controlling-a-haiku-fan-with-a-wall-switch/">Controlling a Haiku fan with a wall switch</a>
+									</li>
+											<li>
+					<a href="https://jackstromberg.com/2021/07/how-to-update-z-wave-js-docker-container/">How to update Z-Wave JS Docker Container</a>
+									</li>
+											<li>
+					<a href="https://jackstromberg.com/2021/07/how-to-add-buster-backports-to-a-raspberry-pi/">How to add buster-backports to a Raspberry Pi</a>
+									</li>
+					</ul>
+
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Andy</span> on <a href="https://jackstromberg.com/2018/01/windows-10-missing-windows-disc-image-burner-for-iso-files/#comment-789533">Windows 10 - Missing Windows Disc Image Burner for ISO files</a></li><li class="recentcomments"><span class="comment-author-link">Chris</span> on <a href="https://jackstromberg.com/2014/07/sysvol-and-group-policy-out-of-sync-on-server-2012-r2-dcs-using-dfsr/#comment-784494">SYSVOL and Group Policy out of Sync on Server 2012 R2 DCs using DFSR</a></li><li class="recentcomments"><span class="comment-author-link">chris</span> on <a href="https://jackstromberg.com/2014/07/sysvol-and-group-policy-out-of-sync-on-server-2012-r2-dcs-using-dfsr/#comment-784493">SYSVOL and Group Policy out of Sync on Server 2012 R2 DCs using DFSR</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://www.vooba.net" class="url" rel="ugc external nofollow">Jack</a></span> on <a href="https://jackstromberg.com/2020/03/how-to-update-home-assistant-docker-container/#comment-781515">How to update Home Assistant Docker Container</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://surowiecki.co.uk/" class="url" rel="ugc external nofollow">Mike</a></span> on <a href="https://jackstromberg.com/2020/03/how-to-update-home-assistant-docker-container/#comment-781498">How to update Home Assistant Docker Container</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>
+			<ul>
+					<li><a href='https://jackstromberg.com/2022/01/'>January 2022</a></li>
+	<li><a href='https://jackstromberg.com/2021/08/'>August 2021</a></li>
+	<li><a href='https://jackstromberg.com/2021/07/'>July 2021</a></li>
+	<li><a href='https://jackstromberg.com/2021/06/'>June 2021</a></li>
+	<li><a href='https://jackstromberg.com/2021/03/'>March 2021</a></li>
+	<li><a href='https://jackstromberg.com/2020/07/'>July 2020</a></li>
+	<li><a href='https://jackstromberg.com/2020/03/'>March 2020</a></li>
+	<li><a href='https://jackstromberg.com/2020/02/'>February 2020</a></li>
+	<li><a href='https://jackstromberg.com/2020/01/'>January 2020</a></li>
+	<li><a href='https://jackstromberg.com/2019/12/'>December 2019</a></li>
+	<li><a href='https://jackstromberg.com/2019/08/'>August 2019</a></li>
+	<li><a href='https://jackstromberg.com/2019/06/'>June 2019</a></li>
+	<li><a href='https://jackstromberg.com/2019/03/'>March 2019</a></li>
+	<li><a href='https://jackstromberg.com/2019/01/'>January 2019</a></li>
+	<li><a href='https://jackstromberg.com/2018/11/'>November 2018</a></li>
+	<li><a href='https://jackstromberg.com/2018/10/'>October 2018</a></li>
+	<li><a href='https://jackstromberg.com/2018/09/'>September 2018</a></li>
+	<li><a href='https://jackstromberg.com/2018/08/'>August 2018</a></li>
+	<li><a href='https://jackstromberg.com/2018/07/'>July 2018</a></li>
+	<li><a href='https://jackstromberg.com/2018/06/'>June 2018</a></li>
+	<li><a href='https://jackstromberg.com/2018/04/'>April 2018</a></li>
+	<li><a href='https://jackstromberg.com/2018/03/'>March 2018</a></li>
+	<li><a href='https://jackstromberg.com/2018/01/'>January 2018</a></li>
+	<li><a href='https://jackstromberg.com/2017/07/'>July 2017</a></li>
+	<li><a href='https://jackstromberg.com/2017/05/'>May 2017</a></li>
+	<li><a href='https://jackstromberg.com/2017/01/'>January 2017</a></li>
+	<li><a href='https://jackstromberg.com/2016/08/'>August 2016</a></li>
+	<li><a href='https://jackstromberg.com/2016/06/'>June 2016</a></li>
+	<li><a href='https://jackstromberg.com/2016/02/'>February 2016</a></li>
+	<li><a href='https://jackstromberg.com/2015/03/'>March 2015</a></li>
+	<li><a href='https://jackstromberg.com/2015/02/'>February 2015</a></li>
+	<li><a href='https://jackstromberg.com/2015/01/'>January 2015</a></li>
+	<li><a href='https://jackstromberg.com/2014/12/'>December 2014</a></li>
+	<li><a href='https://jackstromberg.com/2014/11/'>November 2014</a></li>
+	<li><a href='https://jackstromberg.com/2014/09/'>September 2014</a></li>
+	<li><a href='https://jackstromberg.com/2014/08/'>August 2014</a></li>
+	<li><a href='https://jackstromberg.com/2014/07/'>July 2014</a></li>
+	<li><a href='https://jackstromberg.com/2014/06/'>June 2014</a></li>
+	<li><a href='https://jackstromberg.com/2014/05/'>May 2014</a></li>
+	<li><a href='https://jackstromberg.com/2014/04/'>April 2014</a></li>
+	<li><a href='https://jackstromberg.com/2014/03/'>March 2014</a></li>
+	<li><a href='https://jackstromberg.com/2014/02/'>February 2014</a></li>
+	<li><a href='https://jackstromberg.com/2014/01/'>January 2014</a></li>
+	<li><a href='https://jackstromberg.com/2013/12/'>December 2013</a></li>
+	<li><a href='https://jackstromberg.com/2013/11/'>November 2013</a></li>
+	<li><a href='https://jackstromberg.com/2013/10/'>October 2013</a></li>
+	<li><a href='https://jackstromberg.com/2013/09/'>September 2013</a></li>
+	<li><a href='https://jackstromberg.com/2013/08/'>August 2013</a></li>
+	<li><a href='https://jackstromberg.com/2013/07/'>July 2013</a></li>
+	<li><a href='https://jackstromberg.com/2013/06/'>June 2013</a></li>
+	<li><a href='https://jackstromberg.com/2013/05/'>May 2013</a></li>
+	<li><a href='https://jackstromberg.com/2013/04/'>April 2013</a></li>
+	<li><a href='https://jackstromberg.com/2013/03/'>March 2013</a></li>
+	<li><a href='https://jackstromberg.com/2013/02/'>February 2013</a></li>
+	<li><a href='https://jackstromberg.com/2013/01/'>January 2013</a></li>
+	<li><a href='https://jackstromberg.com/2012/12/'>December 2012</a></li>
+	<li><a href='https://jackstromberg.com/2012/11/'>November 2012</a></li>
+	<li><a href='https://jackstromberg.com/2012/10/'>October 2012</a></li>
+	<li><a href='https://jackstromberg.com/2012/09/'>September 2012</a></li>
+	<li><a href='https://jackstromberg.com/2012/08/'>August 2012</a></li>
+	<li><a href='https://jackstromberg.com/2012/07/'>July 2012</a></li>
+	<li><a href='https://jackstromberg.com/2012/06/'>June 2012</a></li>
+	<li><a href='https://jackstromberg.com/2012/05/'>May 2012</a></li>
+	<li><a href='https://jackstromberg.com/2012/04/'>April 2012</a></li>
+	<li><a href='https://jackstromberg.com/2012/02/'>February 2012</a></li>
+	<li><a href='https://jackstromberg.com/2012/01/'>January 2012</a></li>
+	<li><a href='https://jackstromberg.com/2011/12/'>December 2011</a></li>
+			</ul>
+
+			</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>
+			<ul>
+					<li class="cat-item cat-item-38"><a href="https://jackstromberg.com/category/active-directory/">Active Directory</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://jackstromberg.com/category/android-development/">Android Development</a>
+</li>
+	<li class="cat-item cat-item-18"><a href="https://jackstromberg.com/category/java/">Java</a>
+</li>
+	<li class="cat-item cat-item-33"><a href="https://jackstromberg.com/category/linux/">Linux</a>
+</li>
+	<li class="cat-item cat-item-114"><a href="https://jackstromberg.com/category/lync-2/">Lync</a>
+</li>
+	<li class="cat-item cat-item-627"><a href="https://jackstromberg.com/category/azure/">Microsoft Azure</a>
+</li>
+	<li class="cat-item cat-item-58"><a href="https://jackstromberg.com/category/mssql/">msSQL</a>
+</li>
+	<li class="cat-item cat-item-43"><a href="https://jackstromberg.com/category/networking/">Networking</a>
+</li>
+	<li class="cat-item cat-item-103"><a href="https://jackstromberg.com/category/office-365/">Office 365</a>
+</li>
+	<li class="cat-item cat-item-112"><a href="https://jackstromberg.com/category/powershell-2/">Powershell</a>
+</li>
+	<li class="cat-item cat-item-668"><a href="https://jackstromberg.com/category/raspberry-pi/">Raspberry Pi</a>
+</li>
+	<li class="cat-item cat-item-559"><a href="https://jackstromberg.com/category/system-center/">System Center</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://jackstromberg.com/category/linux/ubuntu/">Ubuntu</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://jackstromberg.com/category/uncategorized/">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-113"><a href="https://jackstromberg.com/category/vmware-2/">VMware</a>
+</li>
+	<li class="cat-item cat-item-60"><a href="https://jackstromberg.com/category/web-development/">Web Development</a>
+</li>
+			</ul>
+
+			</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>
+		<ul>
+						<li><a rel="nofollow" href="https://jackstromberg.com/wp-login.php">Log in</a></li>
+			<li><a href="https://jackstromberg.com/feed/">Entries feed</a></li>
+			<li><a href="https://jackstromberg.com/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</aside><aside id="tag_cloud-2" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><ul class='wp-tag-cloud' role='list'>
+	<li><a href="https://jackstromberg.com/tag/2010/" class="tag-cloud-link tag-link-90 tag-link-position-1" style="font-size: 9.6470588235294pt;" aria-label="2010 (4 items)">2010</a></li>
+	<li><a href="https://jackstromberg.com/tag/active-directory/" class="tag-cloud-link tag-link-634 tag-link-position-2" style="font-size: 17.882352941176pt;" aria-label="Active Directory (15 items)">Active Directory</a></li>
+	<li><a href="https://jackstromberg.com/tag/adfs/" class="tag-cloud-link tag-link-368 tag-link-position-3" style="font-size: 10.964705882353pt;" aria-label="ADFS (5 items)">ADFS</a></li>
+	<li><a href="https://jackstromberg.com/tag/android/" class="tag-cloud-link tag-link-9 tag-link-position-4" style="font-size: 18.376470588235pt;" aria-label="android (16 items)">android</a></li>
+	<li><a href="https://jackstromberg.com/tag/azure/" class="tag-cloud-link tag-link-538 tag-link-position-5" style="font-size: 17.552941176471pt;" aria-label="azure (14 items)">azure</a></li>
+	<li><a href="https://jackstromberg.com/tag/backup/" class="tag-cloud-link tag-link-205 tag-link-position-6" style="font-size: 9.6470588235294pt;" aria-label="backup (4 items)">backup</a></li>
+	<li><a href="https://jackstromberg.com/tag/best-practices-analyzer/" class="tag-cloud-link tag-link-486 tag-link-position-7" style="font-size: 10.964705882353pt;" aria-label="Best Practices Analyzer (5 items)">Best Practices Analyzer</a></li>
+	<li><a href="https://jackstromberg.com/tag/bpa/" class="tag-cloud-link tag-link-485 tag-link-position-8" style="font-size: 10.964705882353pt;" aria-label="BPA (5 items)">BPA</a></li>
+	<li><a href="https://jackstromberg.com/tag/centos-6/" class="tag-cloud-link tag-link-422 tag-link-position-9" style="font-size: 9.6470588235294pt;" aria-label="centos 6 (4 items)">centos 6</a></li>
+	<li><a href="https://jackstromberg.com/tag/cli/" class="tag-cloud-link tag-link-116 tag-link-position-10" style="font-size: 12.117647058824pt;" aria-label="cli (6 items)">cli</a></li>
+	<li><a href="https://jackstromberg.com/tag/command-line/" class="tag-cloud-link tag-link-115 tag-link-position-11" style="font-size: 15.247058823529pt;" aria-label="Command Line (10 items)">Command Line</a></li>
+	<li><a href="https://jackstromberg.com/tag/cx600/" class="tag-cloud-link tag-link-305 tag-link-position-12" style="font-size: 8pt;" aria-label="cx600 (3 items)">cx600</a></li>
+	<li><a href="https://jackstromberg.com/tag/dhcp/" class="tag-cloud-link tag-link-45 tag-link-position-13" style="font-size: 12.117647058824pt;" aria-label="dhcp (6 items)">dhcp</a></li>
+	<li><a href="https://jackstromberg.com/tag/dirsync/" class="tag-cloud-link tag-link-539 tag-link-position-14" style="font-size: 8pt;" aria-label="dirsync (3 items)">dirsync</a></li>
+	<li><a href="https://jackstromberg.com/tag/error/" class="tag-cloud-link tag-link-152 tag-link-position-15" style="font-size: 16.4pt;" aria-label="error (12 items)">error</a></li>
+	<li><a href="https://jackstromberg.com/tag/esxi/" class="tag-cloud-link tag-link-84 tag-link-position-16" style="font-size: 9.6470588235294pt;" aria-label="esxi (4 items)">esxi</a></li>
+	<li><a href="https://jackstromberg.com/tag/exchange/" class="tag-cloud-link tag-link-94 tag-link-position-17" style="font-size: 10.964705882353pt;" aria-label="Exchange (5 items)">Exchange</a></li>
+	<li><a href="https://jackstromberg.com/tag/federation/" class="tag-cloud-link tag-link-290 tag-link-position-18" style="font-size: 13.764705882353pt;" aria-label="federation (8 items)">federation</a></li>
+	<li><a href="https://jackstromberg.com/tag/group-policy/" class="tag-cloud-link tag-link-97 tag-link-position-19" style="font-size: 10.964705882353pt;" aria-label="Group Policy (5 items)">Group Policy</a></li>
+	<li><a href="https://jackstromberg.com/tag/installation/" class="tag-cloud-link tag-link-209 tag-link-position-20" style="font-size: 14.588235294118pt;" aria-label="installation (9 items)">installation</a></li>
+	<li><a href="https://jackstromberg.com/tag/linux/" class="tag-cloud-link tag-link-632 tag-link-position-21" style="font-size: 14.588235294118pt;" aria-label="Linux (9 items)">Linux</a></li>
+	<li><a href="https://jackstromberg.com/tag/lync/" class="tag-cloud-link tag-link-64 tag-link-position-22" style="font-size: 17.882352941176pt;" aria-label="lync (15 items)">lync</a></li>
+	<li><a href="https://jackstromberg.com/tag/lync-2010/" class="tag-cloud-link tag-link-105 tag-link-position-23" style="font-size: 19.529411764706pt;" aria-label="Lync 2010 (19 items)">Lync 2010</a></li>
+	<li><a href="https://jackstromberg.com/tag/lync-2013/" class="tag-cloud-link tag-link-260 tag-link-position-24" style="font-size: 18.376470588235pt;" aria-label="lync 2013 (16 items)">lync 2013</a></li>
+	<li><a href="https://jackstromberg.com/tag/lync-server-2013/" class="tag-cloud-link tag-link-338 tag-link-position-25" style="font-size: 12.941176470588pt;" aria-label="Lync Server 2013 (7 items)">Lync Server 2013</a></li>
+	<li><a href="https://jackstromberg.com/tag/mssql/" class="tag-cloud-link tag-link-635 tag-link-position-26" style="font-size: 17.058823529412pt;" aria-label="msSQL (13 items)">msSQL</a></li>
+	<li><a href="https://jackstromberg.com/tag/office-365/" class="tag-cloud-link tag-link-636 tag-link-position-27" style="font-size: 20.847058823529pt;" aria-label="Office 365 (23 items)">Office 365</a></li>
+	<li><a href="https://jackstromberg.com/tag/polycom/" class="tag-cloud-link tag-link-292 tag-link-position-28" style="font-size: 9.6470588235294pt;" aria-label="polycom (4 items)">polycom</a></li>
+	<li><a href="https://jackstromberg.com/tag/powershell/" class="tag-cloud-link tag-link-78 tag-link-position-29" style="font-size: 18.376470588235pt;" aria-label="powershell (16 items)">powershell</a></li>
+	<li><a href="https://jackstromberg.com/tag/raspberry-pi/" class="tag-cloud-link tag-link-669 tag-link-position-30" style="font-size: 10.964705882353pt;" aria-label="raspberry pi (5 items)">raspberry pi</a></li>
+	<li><a href="https://jackstromberg.com/tag/sccm-2012-r2/" class="tag-cloud-link tag-link-560 tag-link-position-31" style="font-size: 12.941176470588pt;" aria-label="SCCM 2012 r2 (7 items)">SCCM 2012 r2</a></li>
+	<li><a href="https://jackstromberg.com/tag/server-2008/" class="tag-cloud-link tag-link-67 tag-link-position-32" style="font-size: 9.6470588235294pt;" aria-label="Server 2008 (4 items)">Server 2008</a></li>
+	<li><a href="https://jackstromberg.com/tag/server-2008-r2/" class="tag-cloud-link tag-link-71 tag-link-position-33" style="font-size: 12.941176470588pt;" aria-label="Server 2008 R2 (7 items)">Server 2008 R2</a></li>
+	<li><a href="https://jackstromberg.com/tag/server-2012-r2/" class="tag-cloud-link tag-link-472 tag-link-position-34" style="font-size: 12.117647058824pt;" aria-label="server 2012 r2 (6 items)">server 2012 r2</a></li>
+	<li><a href="https://jackstromberg.com/tag/sql/" class="tag-cloud-link tag-link-66 tag-link-position-35" style="font-size: 8pt;" aria-label="SQL (3 items)">SQL</a></li>
+	<li><a href="https://jackstromberg.com/tag/ssl/" class="tag-cloud-link tag-link-83 tag-link-position-36" style="font-size: 17.058823529412pt;" aria-label="ssl (13 items)">ssl</a></li>
+	<li><a href="https://jackstromberg.com/tag/sso/" class="tag-cloud-link tag-link-464 tag-link-position-37" style="font-size: 12.117647058824pt;" aria-label="sso (6 items)">sso</a></li>
+	<li><a href="https://jackstromberg.com/tag/system-center-2012-r2-configuration-manager/" class="tag-cloud-link tag-link-562 tag-link-position-38" style="font-size: 12.941176470588pt;" aria-label="system center 2012 r2 configuration manager (7 items)">system center 2012 r2 configuration manager</a></li>
+	<li><a href="https://jackstromberg.com/tag/tutorial/" class="tag-cloud-link tag-link-246 tag-link-position-39" style="font-size: 18.376470588235pt;" aria-label="Tutorial (16 items)">Tutorial</a></li>
+	<li><a href="https://jackstromberg.com/tag/upgrade/" class="tag-cloud-link tag-link-163 tag-link-position-40" style="font-size: 14.588235294118pt;" aria-label="Upgrade (9 items)">Upgrade</a></li>
+	<li><a href="https://jackstromberg.com/tag/vcenter/" class="tag-cloud-link tag-link-120 tag-link-position-41" style="font-size: 12.941176470588pt;" aria-label="vCenter (7 items)">vCenter</a></li>
+	<li><a href="https://jackstromberg.com/tag/view/" class="tag-cloud-link tag-link-149 tag-link-position-42" style="font-size: 10.964705882353pt;" aria-label="view (5 items)">view</a></li>
+	<li><a href="https://jackstromberg.com/tag/vmware/" class="tag-cloud-link tag-link-69 tag-link-position-43" style="font-size: 22pt;" aria-label="VMWare (27 items)">VMWare</a></li>
+	<li><a href="https://jackstromberg.com/tag/voicemail/" class="tag-cloud-link tag-link-286 tag-link-position-44" style="font-size: 8pt;" aria-label="voicemail (3 items)">voicemail</a></li>
+	<li><a href="https://jackstromberg.com/tag/windows/" class="tag-cloud-link tag-link-77 tag-link-position-45" style="font-size: 9.6470588235294pt;" aria-label="windows (4 items)">windows</a></li>
+</ul>
+</div>
+</aside><aside id="text-2" class="widget widget_text"><h3 class="widget-title">About Me</h3>			<div class="textwidget"><p>I'm currently working for Microsoft as a Program Manager specializing in hybrid networking for Microsoft Azure.</p>
+<p>Please note that I am not speaking on behalf-of Microsoft or any other 3rd party vendors mentioned in any of my blog posts.  All of these posts are more or less reflections of things I have worked on or have experienced. These articles are provided as-is and should be used at your own discretion.</p>
+<p>Did this article help?</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top"><input type="hidden" name="cmd" value="_s-xclick"><input type="hidden" name="hosted_button_id" value="VSLE68CNU97E8"><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"><img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"></form>
+</div>
+		</aside><aside id="acx-social-icons-widget-2" class="widget acx-fsmi-social-icons-desc"><h3 class="widget-title">Social Media Icons</h3><style>
+.widget-acx-social-icons-widget-2-widget img 
+{
+width:32px; 
+ } 
+</style><div id='acurax_si_simple' class='acx_fsmi_float_fix widget-acx-social-icons-widget-2-widget' style='text-align:center;'><a href='https://youtube.com/@jackstromberg' target='_blank'  title='Visit Us On Youtube'><img src='https://jackstromberg.com/wp-content/plugins/floating-social-media-icon/images/themes/1/youtube.png' style='border:0px;' alt='Visit Us On Youtube' height='32px' width='32px' /></a><a href='https://www.linkedin.com/in/jackstromberg/' target='_blank'  title='Visit Us On Linkedin'><img src='https://jackstromberg.com/wp-content/plugins/floating-social-media-icon/images/themes/1/linkedin.png' style='border:0px;' alt='Visit Us On Linkedin' height='32px' width='32px' /></a><a href="https://jackstromberg.com/feed/" target='_blank' title='Check Our Feed'><img src='https://jackstromberg.com/wp-content/plugins/floating-social-media-icon/images/themes/1/feed.png' style='border:0px;' alt='Check Our Feed' height='32px' width='32px' /></a></div></aside><aside id="text-3" class="widget widget_text"><h3 class="widget-title">The Ads</h3>			<div class="textwidget"><style type="text/css">ins {
+background: transparent;
+text-decoration: none;
+}</style><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- side ad -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4442818520832634"
+     data-ad-slot="4374391304"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<p>Interested in buying a Tesla or Tesla Energy? Please consider using my referral link: <a href="https://ts.la/jack70545" title="Tesla Referral">https://ts.la/jack70545</a></p></div>
+		</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript' src='https://jackstromberg.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.6' id='swv-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/jackstromberg.com\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://jackstromberg.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.7.6' id='contact-form-7-js'></script>
+<script type='text/javascript' src='https://jackstromberg.com/wp-includes/js/comment-reply.min.js?ver=6.2' id='comment-reply-js'></script>
+<script type='text/javascript' src='https://jackstromberg.com/wp-content/themes/twentytwelve/js/navigation.js?ver=20141205' id='twentytwelve-navigation-js'></script>
+<script type='text/javascript' src='https://www.google.com/recaptcha/api.js?render=6LeHtI0UAAAAAO1O91PInWV7QSsC69DXmI9-Y920&#038;ver=3.0' id='google-recaptcha-js'></script>
+<script type='text/javascript' src='https://jackstromberg.com/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2' id='wp-polyfill-inert-js'></script>
+<script type='text/javascript' src='https://jackstromberg.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11' id='regenerator-runtime-js'></script>
+<script type='text/javascript' src='https://jackstromberg.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+<script type='text/javascript' id='wpcf7-recaptcha-js-extra'>
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6LeHtI0UAAAAAO1O91PInWV7QSsC69DXmI9-Y920","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://jackstromberg.com/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.7.6' id='wpcf7-recaptcha-js'></script>
+<script type='text/javascript' src='https://jackstromberg.com/wp-content/plugins/share-and-follow/js/browser-check-for-bookmarks.js?ver=1' id='sf-bookmarks-js'></script>
+
+<br> <br> <center>
+	<marquee>	SPECIAL THANKS TO <a href="https://jackstromberg.com/letters-numbers-encoder-decoder/">JACK STROMBERG</a>
+</marquee><br><br>
+<marquee><font size="+1"><font color="red"> <b><i> THANKS FOR BEING WITH US. STAY SAFE. TAKE LOVE🖤 FROM "TCS" </font size="+1"></font color="red"><br> <font size="+1"><font color="GREEN"> <a href="https://www.facebook.com/evandipro2004?mibextid=ZbWKwL">-ISFAQ EVAN DIPRO</a> (CEO OF TCS)
+
+</body>
+</html>
